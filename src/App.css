@@ -1,53 +1,46 @@
-#root {
-  max-width: 80%;
+.app {
+  max-width: 480px;
   margin: 0 auto;
-  width: 70%
   padding: 2rem;
   text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
-
-.task_div{
-  background-color: grey;
-  margin: 1wh;
-  width: 100%
-  height: 10%;
-  border-radius: 7px;
-
+.add-task {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.add-task input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #d1d1d6;
+  border-radius: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.task_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #d1d1d6;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
 }
 
-.card {
-  padding: 2em;
+.task_div.completed span {
+  text-decoration: line-through;
+  color: #6e6e73;
 }
 
-.read-the-docs {
-  color: #888;
+.clear {
+  margin-top: 1rem;
 }
